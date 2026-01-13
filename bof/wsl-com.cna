@@ -18,21 +18,9 @@ beacon_command_register(
 alias wsl {
     local('$handle $data $args $bArch $action $distro $command');
     
-    # Determine beacon architecture
+    # Determine beacon architecture and load appropriate BOF
     $bArch = barch($1);
-    
-    # Select appropriate BOF file
-    if ($bArch eq "x64") {
-        $handle = openf(script_resource("bof.x64.o"));
-    }
-    else if ($bArch eq "x86") {
-        $handle = openf(script_resource("bof.x86.o"));
-    }
-    else {
-        berror($1, "Unsupported architecture: $bArch");
-        return;
-    }
-    
+    $handle = openf(script_resource("./Release/wsl. $+ $bArch $+ .o"));
     $data = readb($handle, -1);
     closef($handle);
     

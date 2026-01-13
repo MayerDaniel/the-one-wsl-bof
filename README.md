@@ -31,7 +31,7 @@ the-one-wsl-bof/
 │   │   │   └── wslserviceproxystub_*.h  # Version-specific interfaces
 │   │   └── base/                 # Helper utilities
 │   ├── Release/                  # Compiled BOF output
-│   │   └── bof.x64.o            # 64-bit BOF
+│   │   └── wsl.x64.o            # 64-bit BOF
 │   ├── wsl-com.cna              # Aggressor script
 │   └── WSL.sln                  # Visual Studio solution
 │

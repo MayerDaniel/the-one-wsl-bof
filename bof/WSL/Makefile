@@ -9,13 +9,13 @@ OUTDIR=..\Release\
 IMDIR=Release\ 
 DOUTDIR=..\Debug\ 
 DIMDIR=Debug\ 
-OUTEXT=.x64.o
+OUTNAME=wsl.x64.o
 !ELSE
 OUTDIR=..\Release\ 
 IMDIR=Release\ 
 DIMDIR=Debug\ 
 DOUTDIR=..\Debug\ 
-OUTEXT=.x86.o
+OUTNAME=wsl.x86.o
 !ENDIF
 
 
@@ -23,9 +23,7 @@ all: *.cpp
     @$(MAKE) /A $(patsubst %.c,%.obj, $(patsubst %.cpp, %.obj, $(patsubsti %, $(IMDIR)\%, $**)))
 
     @if not exist "$(OUTDIR)" mkdir "$(OUTDIR)"
-    copy "$(IMDIR)\*.obj" "$(OUTDIR)"
-    del /F "$(OUTDIR)\*$(OUTEXT)"
-    ren "$(OUTDIR)*.obj" "*$(OUTEXT)"
+    copy "$(IMDIR)\bof.obj" "$(OUTDIR)$(OUTNAME)"
 
 all-debug: *.cpp
     @$(MAKE) /A $(patsubst %.c,%.exe, $(patsubst %.cpp, %.exe, $(patsubsti %, $(DOUTDIR)\%, $**)))
