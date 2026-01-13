@@ -1,0 +1,182 @@
+# =============================================================================
+# Visual Studio / MSBuild
+# =============================================================================
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+*.VC.db
+*.VC.VC.opendb
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Roslyn cache
+*.ide/
+
+# MSTest Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+
+# =============================================================================
+# .NET / C#
+# =============================================================================
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
+
+# =============================================================================
+# BOF Build Artifacts
+# =============================================================================
+
+# Compiled BOF objects (keep the .o files in Release for distribution)
+*.obj
+*.exp
+*.lib
+*.exe
+!bof/Release/*.o
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+.venv/
+
+# =============================================================================
+# Discovery Scripts - Downloaded/Generated Files
+# =============================================================================
+
+# Downloaded MSI/DLL files (large, can be re-downloaded)
+discovery/MsiScripts/wsl_dlls/
+discovery/MsiScripts/wsl_msix/
+
+# Generated IDL files (can be regenerated)
+discovery/MsiScripts/wsl_idls/
+discovery/MsiScripts/diffed_idls/
+discovery/MsiScripts/cleaned_diffed_idls/
+discovery/MsiScripts/preprocessed_idls/
+discovery/MsiScripts/preprocessed_headers/
+
+# =============================================================================
+# OS Generated Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# =============================================================================
+# IDE / Editor
+# =============================================================================
+.idea/
+*.swp
+*.swo
+*~
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json

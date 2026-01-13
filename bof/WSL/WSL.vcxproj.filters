@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{b74d73f4-acc9-410d-a627-90481555d13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{8fa0224c-f4ab-4998-991b-bf2b56db2848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lib">
+      <UniqueIdentifier>{af1152a3-8097-4ccf-9c8a-8b2a0127b070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\idl">
+      <UniqueIdentifier>{93bab6c9-e545-413f-b2e7-23165b2dcbfe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bof.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base\mock.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\mock_syscalls.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="wsl.c">
+      <Filter>Source Files\lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="beacon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="base\helpers.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base\mock.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="beacon_gate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sleepmask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wslservice_h.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="packages.config" />
+    <None Include="utils\boflint.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="wslservice.idl">
+      <Filter>Source Files\idl</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

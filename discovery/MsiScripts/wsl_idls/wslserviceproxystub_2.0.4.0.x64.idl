@@ -1,0 +1,67 @@
+// Auto-generated from: wslserviceproxystub_2.0.4.0.x64.dll
+// Generated: 2026-01-09 22:18:08
+
+// ============================================================================
+// Type Definitions
+// ============================================================================
+
+/* Memory Size: 32 */
+struct Struct_1 {
+    /* Offset: 0 */ int Member0;
+    /* Offset: 8 */ long Member8;
+    /* Offset: 16 */ wchar_t* Member10;
+    /* Offset: 24 */ wchar_t* Member18;
+};
+
+
+/* Memory Size: 544 */
+struct Struct_2 {
+    /* Offset: 0 */ GUID Member0;
+    /* Offset: 16 */ /* ENUM16 */ int Member10;
+    /* Offset: 20 */ int Member14;
+    /* Offset: 24 */ int Member18;
+    /* Offset: 28 */ wchar_t[257] Member1C;
+};
+
+
+/* Memory Size: 24 */
+struct Struct_3 {
+    /* Offset: 0 */ struct Struct_4 Member0;
+    /* Offset: 8 */ struct Struct_4 Member8;
+    /* Offset: 16 */ struct Struct_4 Member10;
+};
+
+
+// ============================================================================
+// Interface Definitions
+// ============================================================================
+
+[
+  object,
+  uuid(38541bdc-f54f-4ceb-85d0-37f0f3d2617e),
+]
+interface ILxssUserSession : IUnknown {
+    HRESULT Proc3(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2);
+    HRESULT Proc4(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In] /* FC_SYSTEM_HANDLE File */ HANDLE p2, /* Stack Offset: 32 */ [In] wchar_t* p3, /* Stack Offset: 40 */ [In] int p4, /* Stack Offset: 48 */ [In] /* unique */wchar_t* p5, /* Stack Offset: 56 */ [In, Out] struct Struct_1* p6, /* Stack Offset: 64 */ [Out] GUID* p7);
+    HRESULT Proc5(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In] /* FC_SYSTEM_HANDLE Pipe */ HANDLE p2, /* Stack Offset: 32 */ [In] wchar_t* p3, /* Stack Offset: 40 */ [In] int p4, /* Stack Offset: 48 */ [In] /* unique */wchar_t* p5, /* Stack Offset: 56 */ [In, Out] struct Struct_1* p6, /* Stack Offset: 64 */ [Out] GUID* p7);
+    HRESULT Proc6(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2, /* Stack Offset: 32 */ [Out] GUID* p3);
+    HRESULT Proc7(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In, Out] struct Struct_1* p1);
+    HRESULT Proc8(/* Stack Offset: 8 */ [In] GUID* p0, /* Stack Offset: 16 */ [In, Out] struct Struct_1* p1);
+    HRESULT Proc9(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In, Out] struct Struct_1* p3);
+    HRESULT Proc10(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [Out] wchar_t** p1, /* Stack Offset: 24 */ [Out] int* p2, /* Stack Offset: 32 */ [Out] int* p3, /* Stack Offset: 40 */ [Out] int* p4, /* Stack Offset: 48 */ [Out] /* C:(FC_TOP_LEVEL_CONFORMANCE)(40)(FC_DEREFERENCE)(FC_ULONG)(Early) */ char*[]* p5, /* Stack Offset: 56 */ [Out] int* p6, /* Stack Offset: 64 */ [In, Out] struct Struct_1* p7);
+    HRESULT Proc11(/* Stack Offset: 8 */ [In, Out] struct Struct_1* p0, /* Stack Offset: 16 */ [Out] GUID* p1);
+    HRESULT Proc12(/* Stack Offset: 8 */ [In] GUID* p0, /* Stack Offset: 16 */ [In, Out] struct Struct_1* p1);
+    HRESULT Proc13(/* Stack Offset: 8 */ [In] GUID* p0, /* Stack Offset: 16 */ [In] sbyte p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2);
+    HRESULT Proc14(/* Stack Offset: 8 */ [Out] int* p0, /* Stack Offset: 16 */ [Out] /* C:(FC_TOP_LEVEL_CONFORMANCE)(8)(FC_DEREFERENCE)(FC_ULONG)(Early) */ struct Struct_2[]* p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2);
+    HRESULT Proc15(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In] /* unique */char* p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In] /* C:(FC_TOP_LEVEL_CONFORMANCE)(24)(FC_ZERO)(FC_ULONG)(Early) */ /* unique */char*[] p3, /* Stack Offset: 40 */ [In] /* unique */wchar_t* p4, /* Stack Offset: 48 */ [In] /* unique */wchar_t* p5, /* Stack Offset: 56 */ [In] /* C:(FC_TOP_LEVEL_CONFORMANCE)(64)(FC_ZERO)(FC_ULONG)(0) */ wchar_t[] p6, /* Stack Offset: 64 */ [In] int p7, /* Stack Offset: 72 */ [In] /* unique */wchar_t* p8, /* Stack Offset: 80 */ [In] short p9, /* Stack Offset: 88 */ [In] short p10, /* Stack Offset: 96 */ [In] int p11, /* Stack Offset: 104 */ [In] struct Struct_3* p12, /* Stack Offset: 112 */ [In] int p13, /* Stack Offset: 120 */ [Out] GUID* p14, /* Stack Offset: 128 */ [Out] GUID* p15, /* Stack Offset: 136 */ [Out] /* FC_SYSTEM_HANDLE File */ HANDLE* p16, /* Stack Offset: 144 */ [Out] /* FC_SYSTEM_HANDLE File */ HANDLE* p17, /* Stack Offset: 152 */ [Out] /* FC_SYSTEM_HANDLE Socket */ HANDLE* p18, /* Stack Offset: 160 */ [Out] /* FC_SYSTEM_HANDLE Socket */ HANDLE* p19, /* Stack Offset: 168 */ [Out] /* FC_SYSTEM_HANDLE Socket */ HANDLE* p20, /* Stack Offset: 176 */ [Out] /* FC_SYSTEM_HANDLE Socket */ HANDLE* p21, /* Stack Offset: 184 */ [In, Out] struct Struct_1* p22);
+    HRESULT Proc16(/* Stack Offset: 8 */ [In] GUID* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2);
+    HRESULT Proc17(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In] /* FC_SYSTEM_HANDLE File */ HANDLE p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In, Out] struct Struct_1* p3);
+    HRESULT Proc18(/* Stack Offset: 8 */ [In] /* unique */GUID* p0, /* Stack Offset: 16 */ [In] /* FC_SYSTEM_HANDLE Pipe */ HANDLE p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In, Out] struct Struct_1* p3);
+    HRESULT Proc19(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2);
+    HRESULT Proc20(/* Stack Offset: 8 */ [In] /* unique */wchar_t* p0, /* Stack Offset: 16 */ [Out] int* p1, /* Stack Offset: 24 */ [Out] int* p2, /* Stack Offset: 32 */ [In, Out] struct Struct_1* p3);
+    HRESULT Proc21(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] int p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In] /* unique */wchar_t* p3, /* Stack Offset: 40 */ [In] /* unique */wchar_t* p4, /* Stack Offset: 48 */ [In] /* unique */wchar_t* p5, /* Stack Offset: 56 */ [Out] int* p6, /* Stack Offset: 64 */ [Out] int* p7, /* Stack Offset: 72 */ [Out] wchar_t** p8, /* Stack Offset: 80 */ [In, Out] struct Struct_1* p9);
+    HRESULT Proc22();
+    HRESULT Proc23(/* Stack Offset: 8 */ [In] /* unique */wchar_t* p0, /* Stack Offset: 16 */ [In] /* unique */wchar_t* p1, /* Stack Offset: 24 */ [In] int p2, /* Stack Offset: 32 */ [In] /* C:(FC_TOP_LEVEL_CONFORMANCE)(24)(FC_ZERO)(FC_ULONG)(Early) */ /* unique */wchar_t*[] p3, /* Stack Offset: 40 */ [Out] GUID* p4);
+    HRESULT Proc24(/* Stack Offset: 8 */ [In] wchar_t* p0, /* Stack Offset: 16 */ [In] /* FC_SYSTEM_HANDLE File */ HANDLE p1, /* Stack Offset: 24 */ [In, Out] struct Struct_1* p2, /* Stack Offset: 32 */ [Out] GUID* p3);
+}
+

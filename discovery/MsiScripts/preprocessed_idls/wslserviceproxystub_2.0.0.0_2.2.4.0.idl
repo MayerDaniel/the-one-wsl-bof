@@ -1,0 +1,66 @@
+// Auto-generated from: wslserviceproxystub_2.0.0.0.x64.dll
+// Generated: 2026-01-09 22:18:06
+
+import "wsl_common_types.idl";
+
+// ============================================================================
+// Type Definitions
+// ============================================================================
+
+// ============================================================================
+// Interface Definitions
+// ============================================================================
+
+[
+  object,
+  uuid(38541bdc-f54f-4ceb-85d0-37f0f3d2617e),
+]
+interface ILxssUserSession_2_0_0_0_2_2_4_0 : IUnknown {
+    HRESULT Proc3([in] GUID* p0, [in] int p1, [in, out] LXSS_ERROR_INFO* p2);
+    HRESULT Proc4([in] wchar_t* p0, [in] int p1, [in] UINT_PTR p2, [in] wchar_t* p3, [in] int p4, [in] wchar_t* p5, [in, out] LXSS_ERROR_INFO* p6, [out] GUID* p7);
+    HRESULT Proc5([in] wchar_t* p0, [in] int p1, [in] UINT_PTR p2, [in] wchar_t* p3, [in] int p4, [in] wchar_t* p5, [in, out] LXSS_ERROR_INFO* p6, [out] GUID* p7);
+    HRESULT GetDistributionId([in] LPCWSTR DistributionName, [in] ULONG Flags, [in, out] LXSS_ERROR_INFO* Error, [out, retval] GUID* pDistroGuid);
+    HRESULT Proc7([in] GUID* p0, [in, out] LXSS_ERROR_INFO* p1);
+    HRESULT Proc8([in] GUID* p0, [in, out] LXSS_ERROR_INFO* p1);
+    HRESULT Proc9([in] GUID* p0, [in] int p1, [in] int p2, [in, out] LXSS_ERROR_INFO* p3);
+    HRESULT Proc10([in] GUID* p0, [out] wchar_t** p1, [out] int* p2, [out] int* p3, [out] int* p4, [out] char*** p5, [out] int* p6, [in, out] LXSS_ERROR_INFO* p7);
+    HRESULT Proc11([in, out] LXSS_ERROR_INFO* p0, [out] GUID* p1);
+    HRESULT Proc12([in] GUID* p0, [in, out] LXSS_ERROR_INFO* p1);
+    HRESULT Proc13([in] GUID* p0, [in] byte p1, [in, out] LXSS_ERROR_INFO* p2);
+    HRESULT Proc14([out] int* p0, [out] LXSS_ENUMERATE_INFO** p1, [in, out] LXSS_ERROR_INFO* p2);
+    HRESULT CreateLxProcess(
+        [in] LPCGUID DistroGuid,
+        [in] LPCSTR Filename,
+        [in] ULONG CommandLineCount,
+        [in, size_is(CommandLineCount)] LPCSTR* CommandLine,
+        [in] LPCWSTR CurrentWorkingDirectory,
+        [in] LPCWSTR NtPath,
+        [in, size_is(NtEnvironmentLength)] WCHAR* NtEnvironment,
+        [in] ULONG NtEnvironmentLength,
+        [in] LPCWSTR Username,
+        [in] SHORT Columns,
+        [in] SHORT Rows,
+        [in] ULONG ConsoleHandle,
+        [in] LXSS_STD_HANDLES* StdHandles,
+        [in] ULONG Flags,
+        [out] GUID* DistributionId,
+        [out] GUID* InstanceId,
+        [out, system_handle(sh_file)] HANDLE* ProcessHandle,
+        [out, system_handle(sh_file)] HANDLE* ServerHandle,
+        [out, system_handle(sh_socket)] HANDLE* StandardIn,
+        [out, system_handle(sh_socket)] HANDLE* StandardOut,
+        [out, system_handle(sh_socket)] HANDLE* StandardErr,
+        [out, system_handle(sh_socket)] HANDLE* CommunicationChannel,
+        [in, out] LXSS_ERROR_INFO* Error);
+    HRESULT Proc16([in] GUID* p0, [in] int p1, [in, out] LXSS_ERROR_INFO* p2);
+    HRESULT Proc17([in] GUID* p0, [in] UINT_PTR p1, [in] int p2, [in, out] LXSS_ERROR_INFO* p3);
+    HRESULT Proc18([in] GUID* p0, [in] UINT_PTR p1, [in] int p2, [in, out] LXSS_ERROR_INFO* p3);
+    HRESULT Proc19([in] wchar_t* p0, [in] int p1, [in, out] LXSS_ERROR_INFO* p2);
+    HRESULT Proc20([in] wchar_t* p0, [out] int* p1, [out] int* p2, [in, out] LXSS_ERROR_INFO* p3);
+    HRESULT Proc21([in] wchar_t* p0, [in] int p1, [in] int p2, [in] wchar_t* p3, [in] wchar_t* p4, [in] wchar_t* p5, [out] int* p6, [out] int* p7, [out] wchar_t** p8, [in, out] LXSS_ERROR_INFO* p9);
+    HRESULT Proc22();
+    HRESULT Proc23([in] wchar_t* p0, [in] wchar_t* p1, [in] int p2, [in] wchar_t** p3, [out] GUID* p4);
+    HRESULT Proc24([in] wchar_t* p0, [in] UINT_PTR p1, [in, out] LXSS_ERROR_INFO* p2, [out] GUID* p3);
+}
+
+

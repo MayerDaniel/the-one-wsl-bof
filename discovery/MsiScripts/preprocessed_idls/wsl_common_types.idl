@@ -1,0 +1,63 @@
+// wsl_common_types.idl
+// Common type definitions for WSL service interfaces
+// Extract common types to avoid redefinition conflicts when importing multiple versions
+
+import "wtypes.idl";
+import "unknwn.idl";
+
+// ============================================================================
+// Enums from official wslservice.idl
+// ============================================================================
+
+typedef enum _LxssHandleType {
+    LxssHandleConsole = 0,
+    LxssHandleInput,
+    LxssHandleOutput,
+} LxssHandleType;
+
+typedef enum _LxssDistributionState {
+    LxssDistributionStateInvalid = 0,
+    LxssDistributionStateInstalled,
+    LxssDistributionStateRunning,
+    LxssDistributionStateInstalling,
+    LxssDistributionStateUninstalling,
+    LxssDistributionStateConverting,
+    LxssDistributionStateExporting
+} LxssDistributionState;
+
+// ============================================================================
+// Common Structures
+// ============================================================================
+
+// LXSS_HANDLE (using generic member names from oleviewdotnet dump)
+typedef struct _LXSS_HANDLE {
+    ULONG Member0;        // UINT_PTR (ULONG in original, UINT_PTR in real IDL)
+    LxssHandleType Member4; // HandleType
+} LXSS_HANDLE;
+
+// Alias for compatibility
+typedef LXSS_HANDLE Struct_4;
+
+// Error information structure
+typedef struct _LXSS_ERROR_INFO {
+    /* Offset: 0 */ int Member0;
+    /* Offset: 8 */ long Member8;
+    /* Offset: 16 */ wchar_t* Member10;
+    /* Offset: 24 */ wchar_t* Member18;
+} LXSS_ERROR_INFO;
+
+// Enumeration information structure
+typedef struct _LXSS_ENUMERATE_INFO {
+    /* Offset: 0 */ GUID Member0;
+    /* Offset: 16 */ LxssDistributionState Member10;
+    /* Offset: 20 */ int Member14;
+    /* Offset: 24 */ int Member18;
+    /* Offset: 28 */ wchar_t Member1C[257];
+} LXSS_ENUMERATE_INFO;
+
+// Standard handles structure
+typedef struct _LXSS_STD_HANDLES {
+    /* Offset: 0 */ LXSS_HANDLE Member0;
+    /* Offset: 8 */ LXSS_HANDLE Member8;
+    /* Offset: 16 */ LXSS_HANDLE Member10;
+} LXSS_STD_HANDLES;

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MKFCU42kK6Y=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\the-one-wsl-bof\\discovery\\ComProxyDump\\ComProxyDump.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dmayer\\.nuget\\packages\\ntapidotnet\\1.1.33\\ntapidotnet.1.1.33.nupkg.sha512"
+  ],
+  "logs": []
+}
