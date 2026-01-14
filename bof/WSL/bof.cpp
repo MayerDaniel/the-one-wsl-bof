@@ -877,7 +877,7 @@ extern "C" {
                     int bytesRead = 0;
                     int totalBytes = 0;
 
-                    BeaconPrintf(CALLBACK_OUTPUT, "[STDOUT]:\n");
+                    BeaconPrintf(CALLBACK_OUTPUT, "[CONSOLE OUTPUT]:\n");
 
                     // Read all available data from socket
                     while ((bytesRead = recv((SOCKET)(ULONG_PTR)stdoutHandle,
